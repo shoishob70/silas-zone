@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Silas Zone | Fashion & Clothing</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f7f7f7;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#111;
+    color:white;
+    padding:18px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#ccc;
+}
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    background:white;
+    color:#111;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    opacity:.85;
+}
+
+/* SECTION */
+
+section{
+    padding:60px 5%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:500px;
+    margin:0 auto 35px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+.product img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0 15px;
+}
+
+.order-btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    background:#111;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.order-btn:hover{
+    background:#333;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:45px 5%;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product img{
+        height:350px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+    SILAS ZONE
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Silas Zone</h1>
+
+<p>Modern Fashion • Quality Clothing • Best Price</p>
+
+<a href="#products" class="btn">
+    Shop Now
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<h2 class="section-title">
+    Our Products
+</h2>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Search products..."
+onkeyup="searchProducts()"
+>
+
+</div>
+
+
+<div class="products" id="productList">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Premium T-Shirt</h3>
+
+<p>Comfortable premium quality T-shirt.</p>
+
+<div class="price">
+৳ 850
+</div>
+
+<button class="order-btn"
+onclick="orderProduct('Premium T-Shirt','850')">
+
+Order Now
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Casual Shirt</h3>
+
+<p>Stylish casual shirt for everyday wear.</p>
+
+<div class="price">
+৳ 1,250
+</div>
+
+<button class="order-btn"
+onclick="orderProduct('Casual Shirt','1250')">
+
+Order Now
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Denim Jacket</h3>
+
+<p>Trendy denim jacket with premium finish.</p>
+
+<div class="price">
+৳ 2,200
+</div>
+
+<button class="order-btn"
+onclick="orderProduct('Denim Jacket','2200')">
+
+Order Now
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Classic Jeans</h3>
+
+<p>Comfortable and stylish jeans.</p>
+
+<div class="price">
+৳ 1,650
+</div>
+
+<button class="order-btn"
+onclick="orderProduct('Classic Jeans','1650')">
+
+Order Now
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">
+    About Silas Zone
+</h2>
+
+<div class="about-content">
+
+<p>
+
+Welcome to <b>Silas Zone</b>.
+
+We provide stylish, comfortable and quality clothing
+at affordable prices.
+
+Our goal is to make fashion simple, affordable
+and accessible for everyone.
+
+Thank you for choosing Silas Zone.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">
+    Contact Us
+</h2>
+
+<div class="contact-box">
+
+<p>📱 Phone: 01XXXXXXXXX</p>
+
+<p>💬 WhatsApp: 01XXXXXXXXX</p>
+
+<p>📧 Email: silaszone@email.com</p>
+
+<p>📍 Location: Dhaka, Bangladesh</p>
+
+<br>
+
+<a
+class="btn"
+href="https://wa.me/8801XXXXXXXXX"
+target="_blank">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Silas Zone. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* WHATSAPP ORDER */
+
+function orderProduct(product, price){
+
+    let phone = "8801XXXXXXXXX";
+
+    let message =
+    "Hello Silas Zone!%0A%0A" +
+    "I want to order:%0A" +
+    "Product: " + product + "%0A" +
+    "Price: ৳" + price + "%0A%0A" +
+    "Please provide more details.";
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + message,
+        "_blank"
+    );
+}
+
+
+/* PRODUCT SEARCH */
+
+function searchProducts(){
+
+    let input =
+    document.getElementById("search").value.toLowerCase();
+
+    let products =
+    document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        let name =
+        product.querySelector("h3").innerText.toLowerCase();
+
+        if(name.includes(input)){
+
+            product.style.display = "";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
